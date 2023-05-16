@@ -1,0 +1,13 @@
+def solution(a, b, c):
+    answer = 0
+    n = [0] * 7
+    n[a] += 1
+    n[b] += 1
+    n[c] += 1
+    if max(n) == 3:
+        answer = (a + b + c) * (a**2 + b**2 + c**2) * (a**3 + b**3 + c**3)
+    elif max(n) == 2:
+        answer = (a + b + c) * (a**2 + b**2 + c**2)
+    else:
+        answer = a + b + c
+    return answer
